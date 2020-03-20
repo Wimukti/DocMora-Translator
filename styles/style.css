@@ -9,7 +9,7 @@ body{
     margin: 0 auto;
 }
 header{
-    background: antiquewhite;
+    background: khaki;
 }
 header::after{
     content: '';
@@ -21,8 +21,8 @@ header::after{
     float: left;
     max-height: 125px;
     padding: 10px 0px;
-
 }
+
 nav{
     float: right;
 }
@@ -31,14 +31,16 @@ nav ul{
     margin: 0;
     padding: 0;
     list-style: none;
-    ;
+
 }
 
 nav li{
     display: inline-block;
     font-weight: bold;
     margin-left: 70px;
-    padding-top: 60px;
+    padding-top: 50px;
+    position: relative;
+
 }
 nav a{
     color: #444444;
@@ -49,5 +51,19 @@ nav a{
 }
 nav a:hover{
     color: black;
+}
+nav a::before{
+    content: '';
+    display: block;
+    height: 10px;
+    background-color: #444444;
 
+    position: absolute;
+    width: 0%;
+    top: 0;
+
+    transition: all ease-in-out 200ms;
+}
+nav a:hover::before{
+    width: 100%;
 }
